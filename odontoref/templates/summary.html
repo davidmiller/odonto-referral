@@ -1,0 +1,47 @@
+<div class="content-offset-25 row" >
+  <div class="col-md-12">
+    <p class="lead">
+      You are creating a referral for: <b>Northumbria Dental Services</b>
+    </p>
+    <p class="lead">
+      Referring Name: <b>[[ editing.name ]]</b>
+    </p>
+    <p class="lead">
+      Patient Name: <b>[[ editing.patient_name ]]</b>
+    </p>
+  </div>
+</div>
+<div class="content-offset-25 row">
+  <div class="col-md-12">
+    <p class="lead">
+      Reason(s) for referral:
+    </p>
+  </div>
+  <div class="col-md-6">
+    <p ng-show="editing.medical">Medical</p>
+    <p ng-show="editing.oral_risk_factor">Oral Risk Factor</p>
+    <p ng-show="editing.accessibility">Accessibility</p>
+    <p ng-show="editing.legal_ethical">Legal & Ethical</p>
+    <p ng-show="editing.communication">Communication</p>
+    <p ng-show="editing.cooperation">Co-operation</p>
+  </div>
+  <div class="col-md-6">
+    <p>
+      Patient pain level: [[ editing.pain ]]
+    </p>
+  </div>
+</div>
+<div class="row content-offset-25">
+  <p>
+    By submitting this referral you are confirming that the above details are correct to
+    the best of your knowledge. Please use the links at the top of the page if you need
+    to make any changes, as incorrect data can cause delays for the patient.
+  </p>
+  <center>
+    <button class="btn btn-lg btn-primary"
+            ng-click="currentScope.goNext()"
+            >
+      submit referral
+    </button>
+  </center>
+</div>

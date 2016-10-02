@@ -1,0 +1,8 @@
+{% load forms %}
+<h3>Enter the contact details of the patient to be referred</h3>
+<div class="form-horizontal">
+  {% input label="Name" model="editing.patient_name" %}
+  {% textarea label="Address" model="editing.patient_address" %}
+  {% input label="Phone" model="editing.patient_phone" %}
+  {% input label="Email" model="editing.patient_email" %}
+</div>

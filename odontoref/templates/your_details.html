@@ -1,0 +1,8 @@
+{% load forms %}
+<h3>To begin the referral process, enter your contact details</h3>
+<div class="form-horizontal">
+  {% input label="name" model="editing.name" %}
+  {% textarea label="address" model="editing.address" %}
+  {% input label="phone" model="editing.phone" %}
+  {% input label="email" model="editing.email" %}
+</div>

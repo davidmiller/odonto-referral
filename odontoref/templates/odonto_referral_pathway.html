@@ -1,0 +1,38 @@
+{% load forms %}
+<div class="container pathway-offset">
+  <div class="row">
+
+    <div ng-show="numSteps > 2" class="pathway-process-steps">
+      {% process_steps process_steps="steps" click="clickIcon" show_titles=False active="progress_step.title === currentStep.title" complete="stepIndex(progress_step) < currentIndex" disabled="stepIndex(progress_step) > currentIndex" %}
+    </div>
+
+  </div> <!-- Row -->
+
+  <div class="row pathway-process-steps-padding">
+    <div class="col-md-8 col-md-push-2">
+      <div class="to_append"></div>
+    </div>
+  </div> <!-- Row -->
+
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+      <button
+        ng-disabled="!currentScope.valid(editing)"
+        class="btn btn-lg btn-secondary float-right"
+        ng-show="currentScope.showNext(editing) && currentScope.hasNext()"
+        ng-click="currentScope.goNext()"
+        go-to-top
+        >
+        Next
+        <i class="fa fa-arrow-right"></i>
+      </button>
+      <div class="float-left" ng-show="currentScope.hasPrevious()">
+        <button class="btn btn-secondary btn-lg" go-to-top ng-click="currentScope.goPrevious()">
+          <i class="fa fa-arrow-left"></i> Back
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+</div>

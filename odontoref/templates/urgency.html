@@ -1,0 +1,19 @@
+{% load forms %}
+<h3>Indicate the level of pain the patient is experiencing</h3>
+<div class="btn-choices row">
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.pain" btn-radio="'Mild'">
+      Mild
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.pain" btn-radio="'Severe'">
+      Severe
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.pain" btn-radio="'Screaming'">
+      Screaming
+    </button>
+  </div>
+</div>

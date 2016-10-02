@@ -1,0 +1,34 @@
+{% load forms %}
+<h3>What is the reason for this referral?</h3>
+<div class="btn-choices row">
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.medical" btn-checkbox="'Medical'">
+      Medical
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.oral_risk_factor" btn-checkbox="'Oral Risk Factor'">
+      Oral Risk Factor
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.accessibility" btn-checkbox="'Accessibility'">
+      Accessibility
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.legal_ethical" btn-checkbox="'Legal & Ethical'">
+      Legal & Ethical
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.communication" btn-checkbox="'Communication'">
+      Communication
+    </button>
+  </div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-lg btn-default" ng-model="editing.cooperation" btn-checkbox="'Co-operation'">
+      Co-operation
+    </button>
+  </div>
+</div>
