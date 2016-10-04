@@ -2,7 +2,7 @@
 <div class="container pathway-offset">
   <div class="row">
 
-    <div ng-show="numSteps > 2" class="pathway-process-steps">
+    <div ng-show="numSteps > 2 && currentScope.hasNext()" class="pathway-process-steps">
       {% process_steps process_steps="steps" click="clickIcon" show_titles=False active="progress_step.title === currentStep.title" complete="stepIndex(progress_step) < currentIndex" disabled="stepIndex(progress_step) > currentIndex" %}
     </div>
 
@@ -14,7 +14,7 @@
     </div>
   </div> <!-- Row -->
 
-  <div class="row">
+  <div class="row" ng-hide="currentStep.title == 'Summary'">
     <div class="col-md-8 col-md-push-2">
       <button
         ng-disabled="!currentScope.valid(editing)"
@@ -26,7 +26,7 @@
         Next
         <i class="fa fa-arrow-right"></i>
       </button>
-      <div class="float-left" ng-show="currentScope.hasPrevious()">
+      <div class="float-left" ng-show="currentScope.hasPrevious() && currentScope.hasNext()">
         <button class="btn btn-secondary btn-lg" go-to-top ng-click="currentScope.goPrevious()">
           <i class="fa fa-arrow-left"></i> Back
         </button>

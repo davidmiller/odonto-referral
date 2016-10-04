@@ -3,11 +3,21 @@
     <p class="lead">
       You are creating a referral for: <b>Northumbria Dental Services</b>
     </p>
+  </div>
+  <div class="col-md-3">
     <p class="lead">
-      Referring Name: <b>[[ editing.name ]]</b>
+      Referring Name:
     </p>
     <p class="lead">
-      Patient Name: <b>[[ editing.patient_name ]]</b>
+      Patient Name:
+    </p>
+  </div>
+  <div class="col-md-9">
+    <p class="lead">
+      <b>[[ editing.name ]]</b>
+    </p>
+    <p class="lead">
+      <b>[[ editing.patient_name ]]</b>
     </p>
   </div>
 </div>
@@ -18,25 +28,29 @@
     </p>
   </div>
   <div class="col-md-6">
-    <p ng-show="editing.medical">Medical</p>
-    <p ng-show="editing.oral_risk_factor">Oral Risk Factor</p>
-    <p ng-show="editing.accessibility">Accessibility</p>
-    <p ng-show="editing.legal_ethical">Legal & Ethical</p>
-    <p ng-show="editing.communication">Communication</p>
-    <p ng-show="editing.cooperation">Co-operation</p>
+    <p ng-show="editing.medical"><b>Medical</b></p>
+    <p ng-show="editing.oral_risk_factor"><b>Oral Risk Factor</b></p>
+    <p ng-show="editing.accessibility"><b>Accessibility</b></p>
+    <p ng-show="editing.legal_ethical"><b>Legal & Ethical</b></p>
+    <p ng-show="editing.communication"><b>Communication</b></p>
+    <p ng-show="editing.cooperation"><b>Co-operation</b></p>
   </div>
   <div class="col-md-6">
     <p>
-      Patient pain level: [[ editing.pain ]]
+      Patient pain level: <b>[[ editing.pain ]]</b>
     </p>
   </div>
 </div>
-<div class="row content-offset-25">
-  <p>
-    By submitting this referral you are confirming that the above details are correct to
-    the best of your knowledge. Please use the links at the top of the page if you need
-    to make any changes, as incorrect data can cause delays for the patient.
-  </p>
+<div class="row content-offset-25 content-offset-below-25">
+  <div class="col-md-8 col-md-offset-2">
+    <p class="text-muted">
+      <small>
+        By submitting this referral you are confirming that the above details are correct to
+        the best of your knowledge. Please use the links at the top of the page if you need
+        to make any changes, as incorrect data can cause delays for the patient.
+      </small>
+    </p>
+  </div>
   <center>
     <button class="btn btn-lg btn-primary"
             ng-click="currentScope.goNext()"

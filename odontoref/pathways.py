@@ -29,7 +29,11 @@ class ReferralPathway(pathways.Pathway):
             template_url='/templates/patient_details.html'
         ),
         pathways.Step(
-            title="Send",
+            title="Summary",
             template_url='/templates/summary.html'
-        )
+        ),
+        pathways.Step(
+            title="Thanks",
+            template_url='/templates/thanks.html'
+        ),
     )
